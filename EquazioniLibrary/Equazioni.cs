@@ -6,7 +6,12 @@ namespace EquazioniLibrary
     {
         public static bool IsDetermined(double a)
         {
-            return true;
+            if (a != 0)
+            {
+                return true;
+            }
+            else
+                return false;
         }
     }
 }

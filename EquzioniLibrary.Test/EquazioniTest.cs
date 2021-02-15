@@ -3,11 +3,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace EquzioniLibrary.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class EquazioniTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void IsDetermined()
         {
+            double a = 0;
+
         }
     }
 }
