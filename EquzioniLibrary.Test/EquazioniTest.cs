@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using EquazioniLibrary;
 
 namespace EquzioniLibrary.Test
 {
@@ -6,10 +7,86 @@ namespace EquzioniLibrary.Test
     public class EquazioniTest
     {
         [TestMethod]
-        public void IsDetermined()
+        public void Determined()
+        {
+            double a = 1;
+            bool valoreaspettato = true;
+            bool risultato = Equazioni.IsDetermined(a);
+            Assert.AreEqual(valoreaspettato, risultato);
+        }
+
+        [TestMethod]
+        public void Determined1()
         {
             double a = 0;
-
+            bool valoreaspettato = false;
+            bool risultato = Equazioni.IsDetermined(a);
+            Assert.AreEqual(valoreaspettato, risultato);
         }
+
+        [TestMethod]
+        public void Impossible()
+        {
+            double b = 1;
+            double a = 1;
+            bool valoreaspettato = false;
+            bool risultato = Equazioni.IsInconsisted(a, b);
+            Assert.AreEqual(valoreaspettato, risultato);
+        }
+
+        [TestMethod]
+        public void Impossible1()
+        {
+            double b = 0;
+            double a = 0;
+            bool valoreaspettato = true;
+            bool risultato = Equazioni.IsInconsisted(a, b);
+            Assert.AreEqual(valoreaspettato, risultato);
+        }
+
+        [TestMethod]
+        public void IsDegree2()
+        {
+            double x = 3;
+            double e = 2;
+            bool valoreaspettato = true;
+            bool risultato = Equazioni.IsDegree2(e);
+            Assert.AreEqual(valoreaspettato, risultato);
+        }
+
+        [TestMethod]
+        public void Delta()
+        {
+            int a = 3;
+            int b = 2;
+            int c = 4;
+            int valoreaspettato = -44;
+            double risultato = Equazioni.Delta(a, b, c);
+            Assert.AreEqual(valoreaspettato, risultato);
+        }
+
+        [TestMethod]
+        public void DeltaUguale0()
+        {
+            int a = 4;
+            int b = 20;
+            int c = 25;
+            int valoreaspettato = 0;
+            double risultato = Equazioni.Delta(a, b, c);
+            Assert.AreEqual(valoreaspettato, risultato);
+        }
+
+        [TestMethod]
+        public void EquazioneSecondoGrado()
+        {
+            int a = 0;
+            int b = 5;
+            int c = 6;
+            string valoreaspettato = "x1- -1,2";
+            string risultato = Equazioni.Equazione(a, b, c);
+            Assert.AreEqual(valoreaspettato, risultato);
+        }
+
+
     }
 }
