@@ -9,7 +9,7 @@ namespace EquazioniLibrary
             return a != 0;
         }
 
-        public static bool IsInconsisted(double a ,double b)
+        public static bool IsInconsisted(double a, double b)
         {
             return (a == 0 && b == 0);
         }
@@ -19,7 +19,7 @@ namespace EquazioniLibrary
             return e == 2;
         }
 
-        public static double Delta(int a, int b , int c)
+        public static double Delta(int a, int b, int c)
         {
             return b * b - 4 * a * c;
         }
@@ -30,13 +30,25 @@ namespace EquazioniLibrary
             double x1 = (-b - Math.Sqrt(delta)) / (2 * a);
             double x2 = (-b + Math.Sqrt(delta)) / (2 * a);
             if (a == 0)
-                return $"x1- {x1}";
+                return $"x1 - {x1}";
             else if (delta < 0)
                 return "Impossibile";
 
             return $"x1 - {x1} x2 - {x2}";
+        }
 
-
+        public static string EquationDegree1(double a, double b) 
+        {
+            if(IsDetermined(a))
+            {
+                double x = b / a;
+                return $"x - {x}";
+            }
+            else if(IsInconsisted(a,  b))
+            {
+                return "Impossibile";
+            }
+            return "indeterminata";
         }
     }
 }

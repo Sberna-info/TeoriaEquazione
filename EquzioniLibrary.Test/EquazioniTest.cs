@@ -79,11 +79,21 @@ namespace EquzioniLibrary.Test
         [TestMethod]
         public void EquazioneSecondoGrado()
         {
-            int a = 0;
-            int b = 5;
-            int c = 6;
-            string valoreaspettato = "x1- -1,2";
+            int a = 1;
+            int b = 3;
+            int c = 2;
+            string valoreaspettato = "x1 - -2 x2 - -1";
             string risultato = Equazioni.Equazione(a, b, c);
+            Assert.AreEqual(valoreaspettato, risultato);
+        }
+
+        [TestMethod]
+        public void EquazionePrimoGrado()
+        {
+            int a = 5;
+            int b = 10;
+            string valoreaspettato = "x - 2";
+            string risultato = Equazioni.EquationDegree1(a, b);
             Assert.AreEqual(valoreaspettato, risultato);
         }
 
