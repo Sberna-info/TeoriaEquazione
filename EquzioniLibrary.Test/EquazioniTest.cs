@@ -47,10 +47,18 @@ namespace EquzioniLibrary.Test
         [TestMethod]
         public void IsDegree2()
         {
-            double x = 3;
-            double e = 2;
+            double a = 2;
+            bool valoreaspettato = false;
+            bool risultato = Equazioni.IsDegree2(a);
+            Assert.AreEqual(valoreaspettato, risultato);
+        }
+
+        [TestMethod]
+        public void IsDegree1()
+        {
+            double a = 1;
             bool valoreaspettato = true;
-            bool risultato = Equazioni.IsDegree2(e);
+            bool risultato = Equazioni.IsDegree2(a);
             Assert.AreEqual(valoreaspettato, risultato);
         }
 
@@ -61,6 +69,17 @@ namespace EquzioniLibrary.Test
             int b = 2;
             int c = 4;
             int valoreaspettato = -44;
+            double risultato = Equazioni.Delta(a, b, c);
+            Assert.AreEqual(valoreaspettato, risultato);
+        }
+
+        [TestMethod]
+        public void Delta1()
+        {
+            int a = 3;
+            int b = 5;
+            int c = 6;
+            int valoreaspettato = -47;
             double risultato = Equazioni.Delta(a, b, c);
             Assert.AreEqual(valoreaspettato, risultato);
         }
@@ -83,6 +102,16 @@ namespace EquzioniLibrary.Test
             int b = 3;
             int c = 2;
             string valoreaspettato = "x1 - -2 x2 - -1";
+            string risultato = Equazioni.Equazione(a, b, c);
+            Assert.AreEqual(valoreaspettato, risultato);
+        }
+        [TestMethod]
+        public void EquazioneSecondoGrado1()
+        {
+            int a = 1;
+            int b = -2;
+            int c = 1;
+            string valoreaspettato = "x1 - 1 x2 - 1";
             string risultato = Equazioni.Equazione(a, b, c);
             Assert.AreEqual(valoreaspettato, risultato);
         }

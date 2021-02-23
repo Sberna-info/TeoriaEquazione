@@ -14,9 +14,9 @@ namespace EquazioniLibrary
             return (a == 0 && b == 0);
         }
 
-        public static bool IsDegree2(double e)
+        public static bool IsDegree2(double a)
         {
-            return e == 2;
+            return a != 0;
         }
 
         public static double Delta(int a, int b, int c)
@@ -30,7 +30,7 @@ namespace EquazioniLibrary
             double x1 = (-b - Math.Sqrt(delta)) / (2 * a);
             double x2 = (-b + Math.Sqrt(delta)) / (2 * a);
             if (a == 0)
-                return $"x1 - {x1}";
+                return $"x - {x1}";
             else if (delta < 0)
                 return "Impossibile";
 
