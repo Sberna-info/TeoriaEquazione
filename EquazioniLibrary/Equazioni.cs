@@ -32,7 +32,7 @@ namespace EquazioniLibrary
             if (a == 0)
                 return $"x - {x1}";
             else if (delta < 0)
-                return "Impossibile";
+                return "l'equazione è Impossibile";
 
             return $"x1 - {x1} x2 - {x2}";
         }
@@ -46,9 +46,9 @@ namespace EquazioniLibrary
             }
             else if(IsInconsisted(a,  b))
             {
-                return "Impossibile";
+                return "l'equazione è Impossibile";
             }
-            return "indeterminata";
+            return "l'equazione è indeterminata";
         }
     }
 }
