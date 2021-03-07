@@ -47,7 +47,7 @@ namespace EquzioniLibrary.Test
         [TestMethod]
         public void IsDegree2()
         {
-            double a = 2;
+            double a = 0;
             bool valoreaspettato = false;
             bool risultato = Equazioni.IsDegree2(a);
             Assert.AreEqual(valoreaspettato, risultato);
@@ -56,7 +56,7 @@ namespace EquzioniLibrary.Test
         [TestMethod]
         public void IsDegree1()
         {
-            double a = 1;
+            double a = 2;
             bool valoreaspettato = true;
             bool risultato = Equazioni.IsDegree2(a);
             Assert.AreEqual(valoreaspettato, risultato);

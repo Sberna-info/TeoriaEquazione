@@ -21,7 +21,7 @@ namespace EquazioniLibrary
 
         public static double Delta(int a, int b, int c)
         {
-            return b * b - 4 * a * c;
+            return (b * b) - (4 * a * c);
         }
 
         public static string Equazione(int a, int b, int c)
