@@ -7,7 +7,7 @@ namespace ConsoleAppTest
     {
         static void Main(string[] args)
         {
-            Console.Write("Inserisci il numero accanto di cosa vuoi eseguire:\n1 verifica se è determinata, \n2 se è impossibile, \n3 se è di secondo grado, \n4 se vuoi calcolare il delta, \n5 se vuoi il risultato di un'equazione di secondo grado, \n6 se vuoi il risultato di un'equazione di primo grado \n");
+            Console.Write("1 verifica se è determinata, \n2 se è impossibile, \n3 se è di secondo grado, \n4 se vuoi calcolare il delta, \n5 se vuoi il risultato di un'equazione di secondo grado, \n6 se vuoi il risultato di un'equazione di primo grado \nInserisci il numero accanto di cosa vuoi eseguire:");
             string str = Console.ReadLine();
 
             switch (str)
