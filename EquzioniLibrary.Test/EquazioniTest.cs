@@ -111,7 +111,7 @@ namespace EquzioniLibrary.Test
             int a = 1;
             int b = -2;
             int c = 1;
-            string valoreaspettato = "x1 - 1 x2 - 1";
+            string valoreaspettato = "x - 0";
             string risultato = Equazioni.Equazione(a, b, c);
             Assert.AreEqual(valoreaspettato, risultato);
         }
@@ -125,6 +125,27 @@ namespace EquzioniLibrary.Test
             string risultato = Equazioni.EquationDegree1(a, b);
             Assert.AreEqual(valoreaspettato, risultato);
         }
+
+        [TestMethod]
+        public void AssertIsTrue()
+        {
+            double a = 1;
+            bool valoreaspettato = true;
+            bool risultato = Equazioni.IsDetermined(a);
+            Assert.IsTrue(risultato);
+        }
+
+        [TestMethod]
+        public void AssertIsFalse()
+        {
+            double a = 0;
+            bool valoreaspettato = false;
+            bool risultato = Equazioni.IsDetermined(a);
+            Assert.IsFalse(risultato);
+        }
+
+
+
 
 
     }

@@ -26,15 +26,19 @@ namespace EquazioniLibrary
 
         public static string Equazione(int a, int b, int c)
         {
+            double x1 = 0;
+            double x2;
             double delta = Delta(a, b, c);
-            double x1 = (-b - Math.Sqrt(delta)) / (2 * a);
-            double x2 = (-b + Math.Sqrt(delta)) / (2 * a);
-            if (a == 0)
+            if (delta == 0)
                 return $"x - {x1}";
             else if (delta < 0)
                 return "l'equazione è Impossibile";
-
-            return $"x1 - {x1} x2 - {x2}";
+            else
+            {
+                x1 = (-b - Math.Sqrt(delta)) / (2 * a);
+                x2 = (-b + Math.Sqrt(delta)) / (2 * a);
+                return $"x1 - {x1} x2 - {x2}";
+            }
         }
 
         public static string EquationDegree1(double a, double b) 
