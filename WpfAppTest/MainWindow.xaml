@@ -4,22 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppTest"
-        mc:Ignorable="d"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Inserisci cosa vuoi eseguire: 1 verifica se è determinata, 2 se è impossibile, 3 se è di secondo grado," HorizontalAlignment="Left" Margin="45,74,0,0" VerticalAlignment="Top" Width="715" RenderTransformOrigin="0.5,0.5">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.046"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Label Content=" 4 se vuoi calcolare il delta, 5 se vuoi il risultato di un'equazione di secondo grado, 6 se vuoi il risultato di un'equazione di primo grado " HorizontalAlignment="Left" Margin="45,99,0,0" VerticalAlignment="Top" Width="720"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="600,314,0,0" VerticalAlignment="Top" Height="45" Width="140" Click="Buttom_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="60,149,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="150"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF03FFFF" Offset="0.493"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="bntCalcola" Content="Seleziona" HorizontalAlignment="Left" Margin="530,163,0,0" VerticalAlignment="Top" Width="194" Height="80" Click="bntCalcola_Click" BorderBrush="Black" Background="Black" Foreground="#FF00ABD1"/>
+        <RadioButton x:Name="rbtDeterminata" Content="1 verifica se è determinata" HorizontalAlignment="Left" Margin="33,82,0,0" VerticalAlignment="Top" Height="26" Width="278"/>
+        <RadioButton x:Name="rbtImpossibile" Content="2 se è impossibile" HorizontalAlignment="Left" Margin="33,125,0,0" VerticalAlignment="Top" Height="26" Width="250"/>
+        <RadioButton x:Name="rbtSecondoGrado" Content="3 se è di secondo grado" HorizontalAlignment="Left" Margin="33,163,0,0" VerticalAlignment="Top" Height="26" Width="263"/>
+        <RadioButton x:Name="rbtDelta" Content="4 se vuoi calcolare il delta" HorizontalAlignment="Left" Margin="33,203,0,0" VerticalAlignment="Top" Height="26" Width="312"/>
+        <RadioButton x:Name="rbtEquazione2" Content="5 se vuoi il risultato di un'equazione di secondo grado" HorizontalAlignment="Left" Margin="33,238,0,0" VerticalAlignment="Top" Height="25" Width="506"/>
+        <RadioButton x:Name="rbtEquazione1" Content="6 se vuoi il risultato di un'equazione di primo grado" HorizontalAlignment="Left" Margin="33,272,0,0" VerticalAlignment="Top" Height="26" Width="478"/>
 
     </Grid>
 </Window>

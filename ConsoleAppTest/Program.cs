@@ -61,7 +61,7 @@ namespace ConsoleAppTest
                     int b6 = int.Parse(Console.ReadLine());
                     Console.Write("Inserisci il valore di c: ");
                     int c1 = int.Parse(Console.ReadLine());
-                    string s = Equazioni.Equazione(a4, b6, c1);
+                    string s = Equazioni.EquazioneSecondo(a4, b6, c1);
                     Console.WriteLine(s);
                     break;
 

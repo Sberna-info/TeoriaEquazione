@@ -24,20 +24,20 @@ namespace EquazioniLibrary
             return (b * b) - (4 * a * c);
         }
 
-        public static string Equazione(int a, int b, int c)
+        public static string EquazioneSecondo(int a, int b, int c)
         {
             double x1 = 0;
             double x2;
             double delta = Delta(a, b, c);
             if (delta == 0)
-                return $"x - {x1}";
+                return $"x = {x1}";
             else if (delta < 0)
                 return "l'equazione è Impossibile";
             else
             {
                 x1 = (-b - Math.Sqrt(delta)) / (2 * a);
                 x2 = (-b + Math.Sqrt(delta)) / (2 * a);
-                return $"x1 - {x1} x2 - {x2}";
+                return $"x1 = {x1} x2 = {x2}";
             }
         }
 
@@ -46,7 +46,7 @@ namespace EquazioniLibrary
             if(IsDetermined(a))
             {
                 double x = b / a;
-                return $"x - {x}";
+                return $"x = {x}";
             }
             else if(IsInconsisted(a,  b))
             {

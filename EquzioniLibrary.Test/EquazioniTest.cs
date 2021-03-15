@@ -102,7 +102,7 @@ namespace EquzioniLibrary.Test
             int b = 3;
             int c = 2;
             string valoreaspettato = "x1 - -2 x2 - -1";
-            string risultato = Equazioni.Equazione(a, b, c);
+            string risultato = Equazioni.EquazioneSecondo(a, b, c);
             Assert.AreEqual(valoreaspettato, risultato);
         }
         [TestMethod]
@@ -112,7 +112,7 @@ namespace EquzioniLibrary.Test
             int b = -2;
             int c = 1;
             string valoreaspettato = "x - 0";
-            string risultato = Equazioni.Equazione(a, b, c);
+            string risultato = Equazioni.EquazioneSecondo(a, b, c);
             Assert.AreEqual(valoreaspettato, risultato);
         }
 

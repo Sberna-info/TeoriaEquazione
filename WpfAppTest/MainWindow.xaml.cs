@@ -26,42 +26,53 @@ namespace WpfAppTest
             InitializeComponent();
         }
 
-        private void Buttom_Click()
+        private void bntCalcola_Click(object sender, RoutedEventArgs e)
         {
-            Console.Write("Inserisci il numero accanto di cosa vuoi eseguire:\n1 verifica se è determinata, \n2 se è impossibile, \n3 se è di secondo grado, \n4 se vuoi calcolare il delta, \n5 se vuoi il risultato di un'equazione di secondo grado, \n6 se vuoi il risultato di un'equazione di primo grado \n");
-            string str = Console.ReadLine();
-
-            switch (str)
+            if (rbtDeterminata.IsChecked == true)
             {
-                case "1":
-                    Console.Write("Inserisci il valore di a: ");
-                    int a = int.Parse(Console.ReadLine());
-                    bool b = Equazioni.IsDetermined(a);
-                    if (b)
-                        Console.WriteLine("l'equazione è determinata");
-                    else
-                        Console.WriteLine("l'equazione non è determinata");
-                    break;
-
-                case "2":
-                    Console.Write("Inserisci il valore di a: ");
-                    int a1 = int.Parse(Console.ReadLine());
-                    Console.Write("Inserisci il valore di b: ");
-                    int b1 = int.Parse(Console.ReadLine());
-                    bool b2 = Equazioni.IsInconsisted(a1, b1);
-                    if (b2)
-                        Console.WriteLine("l'equazione è impossibile");
-                    else
-                        Console.WriteLine("l'equazione non è impossibile");
-                    break;
-
-                case "3":
-
-                    break;
-                default:
-                    Console.Write("valore inserito non valido");
-                    break;
+                Determinata det = new Determinata();
+                det.Show();
             }
+
+            else if (rbtImpossibile.IsChecked == true)
+            {
+                Impossibile imp = new Impossibile();
+                imp.Show();
+            }
+
+
+            else if (rbtSecondoGrado.IsChecked == true)
+            {
+                Degree2 degree = new Degree2();
+                degree.Show();
+            }
+
+
+            else if (rbtDelta.IsChecked == true)
+            {
+                Delta delta = new Delta();
+                delta.Show();
+            }
+
+
+            else if (rbtEquazione2.IsChecked == true)
+            {
+                EquazioneSecondo equazione = new EquazioneSecondo();
+                equazione.Show();
+
+            }
+
+            else if (rbtEquazione1.IsChecked == true)
+            {
+                EquazionePrimo equazione1 = new EquazionePrimo();
+                equazione1.Show();
+
+            }
+            else
+                MessageBox.Show("Prima di premere il bottone seleziona cosa vuoi fare", "Errore", MessageBoxButton.OK, MessageBoxImage.Error);
+
         }
+
+
     }
 }
